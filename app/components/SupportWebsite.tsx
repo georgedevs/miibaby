@@ -9,6 +9,7 @@ const SupportWebsite = () => {
   const [currentQuote, setCurrentQuote] = useState('');
   const [scrollY, setScrollY] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
   const quotes = [
@@ -23,9 +24,27 @@ const SupportWebsite = () => {
   ];
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+    
     const handleScroll = () => setScrollY(window.scrollY);
+    
+    // Initialize window size
+    handleResize();
+    
+    // Add event listeners
+    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleMusic = () => {
@@ -82,8 +101,8 @@ const SupportWebsite = () => {
             style={{
               width: Math.random() * 200 + 100 + 'px',
               height: Math.random() * 200 + 100 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               x: [0, 30, 0],
@@ -100,13 +119,13 @@ const SupportWebsite = () => {
         ))}
 
         {/* Sparkles */}
-        {[...Array(20)].map((_, i) => (
+        {windowSize.width > 0 && [...Array(20)].map((_, i) => (
           <motion.div
             key={`sparkle-${i}`}
             className="absolute"
             initial={{ 
-              x: Math.random() * window.innerWidth, 
-              y: Math.random() * window.innerHeight 
+              x: Math.random() * windowSize.width, 
+              y: Math.random() * windowSize.height 
             }}
             animate={{
               y: [0, -20, 0],
@@ -246,4 +265,3 @@ const SupportWebsite = () => {
 };
 
 export default SupportWebsite;
-
