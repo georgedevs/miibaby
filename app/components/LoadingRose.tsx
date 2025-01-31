@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const LoadingRose = ({ onLoadingComplete }) => {
+interface LoadingRoseProps {
+    onLoadingComplete: () => void;
+  }
+  
+  const LoadingRose: React.FC<LoadingRoseProps> = ({ onLoadingComplete }) => {
   return (
   <motion.div 
       className="fixed inset-0 z-50 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 flex items-center justify-center"

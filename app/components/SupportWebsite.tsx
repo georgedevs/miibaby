@@ -9,7 +9,7 @@ const SupportWebsite = () => {
   const [currentQuote, setCurrentQuote] = useState('');
   const [scrollY, setScrollY] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   
   const quotes = [
     "Every heartbreak is a stepping stone to something beautiful 🌟",
