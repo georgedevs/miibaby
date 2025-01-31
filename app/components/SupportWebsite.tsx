@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Sparkles, Star, Music, Volume2, VolumeX } from 'lucide-react';
+import { Heart, Sparkles, Star, Volume2, VolumeX } from 'lucide-react';
 
 const SupportWebsite = () => {
   const [showQuote, setShowQuote] = useState(false);
