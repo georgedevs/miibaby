@@ -19,7 +19,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Support for My Best Friend ❤️", 
+  title: "Support for My Friend ❤️", 
   description: "A special message for a special friend",
 };
 
