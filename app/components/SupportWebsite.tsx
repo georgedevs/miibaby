@@ -143,7 +143,7 @@ const SupportWebsite = () => {
             Hey Atiyyah !!!!!
           </h1>
           <p className="text-2xl md:text-3xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Just a little reminder that you're absolutely incredible, and this moment 
+            Just a little reminder that you&apos;re absolutely incredible, and this moment 
             is just a chapter in your beautiful story 💖
           </p>
         </motion.div>
@@ -226,7 +226,7 @@ const SupportWebsite = () => {
             No matter where life takes us...
           </p>
           <p className="text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-            I'll always be here for you 💕
+            I&apos;ll always be here for you 💕
           </p>
           
           <motion.div
