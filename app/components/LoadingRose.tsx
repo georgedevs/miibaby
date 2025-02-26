@@ -11,7 +11,7 @@ interface LoadingRoseProps {
       className="fixed inset-0 z-50 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 flex items-center justify-center"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 0.5, delay: 6.5 }}
+      transition={{ duration: 0.5, delay: 7.5 }}
       onAnimationComplete={onLoadingComplete}
     >
          <div className="relative flex flex-col items-center justify-center h-screen">

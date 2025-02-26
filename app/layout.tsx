@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Dancing_Script } from "next/font/google";  // Add this import
+import { Dancing_Script } from "next/font/google"; 
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,8 +19,8 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Support for My Friend ❤️", 
-  description: "A special message for a special friend",
+  title: "I love you Babe 💓", 
+  description: "A special gift for my baby",
 };
 
 export default function RootLayout({
