@@ -207,7 +207,7 @@ const LoveWebsite = () => {
 
       {/* Love Messages Carousel */}
       <div className="py-24 overflow-hidden bg-gradient-to-r from-red-50 via-pink-50 to-red-50">
-        <h2 className="text-4xl md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-pink-500 mb-16">
+        <h2 className="text-4xl md:text-5xl text-center pb-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-pink-500 mb-16">
           All the ways I love you... ❤️
         </h2>
         
@@ -243,7 +243,7 @@ const LoveWebsite = () => {
           <p className="text-3xl text-gray-700 mb-6">
             Today, tomorrow, and forever...
           </p>
-          <p className="text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-pink-500">
+          <p className="text-4xl md:text-5xl bg-clip-text pb-2 text-transparent bg-gradient-to-r from-red-500 to-pink-500">
             I will always love you ❤️
           </p>
           
